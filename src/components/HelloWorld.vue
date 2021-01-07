@@ -7,15 +7,18 @@
         </Demo>
       </div>
     </debounce>
+    <AHA @popup="popup"></AHA>
   </div>
 </template>
 
 <script>
 import debounce from "../abstractComponents/demo.vue";
+import demo from "../components/demo.vue";
 export default {
   name: 'HelloWorld',
   components: {
     debounce,
+    'AHA': demo,
   },
   props: {
     msg: String
@@ -23,6 +26,9 @@ export default {
   methods: {
     fn() {
       console.log('点击事件');
+    },
+    popup(obj) {
+      console.log('emit-popup', obj);
     },
   },
   created() {
