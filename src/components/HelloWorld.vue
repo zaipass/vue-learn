@@ -1,15 +1,30 @@
 <template>
   <div class="hello">
-    <Demo></Demo>
+    <debounce>
+      <div @click="fn">
+        <Demo>
+          <div>ok</div>
+        </Demo>
+      </div>
+    </debounce>
   </div>
 </template>
 
 <script>
+import debounce from "../abstractComponents/demo.vue";
 export default {
   name: 'HelloWorld',
+  components: {
+    debounce,
+  },
   props: {
     msg: String
-  }
+  },
+  methods: {
+    fn() {
+      console.log('点击事件');
+    },
+  },
 }
 </script>
 

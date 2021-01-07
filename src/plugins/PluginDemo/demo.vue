@@ -1,6 +1,6 @@
 <template>
   <div class="wo-demo-plugin">
-    loading...
+    <button>loading...</button>
   </div>
 </template>
 
