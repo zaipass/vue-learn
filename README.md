@@ -20,5 +20,11 @@ npm run build
 npm run lint
 ```
 
+### vue生成webpack配置文件
+```
+vue inspect --mode=devolepment > webpack.config.js
+vue inspect --mode=production > webpack.config.js
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
