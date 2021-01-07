@@ -5,6 +5,7 @@ import PluginDemo from './plugins/PluginDemo'
 
 Vue.config.productionTip = false
 Vue.use(PluginDemo);
+Vue.woFn();
 
 new Vue({
   render: h => h(App),

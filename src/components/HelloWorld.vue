@@ -25,6 +25,10 @@ export default {
       console.log('点击事件');
     },
   },
+  created() {
+    let a = this.$getWO();
+    console.log(a);
+  },
 }
 </script>
 
