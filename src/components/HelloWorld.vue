@@ -8,17 +8,20 @@
       </div>
     </debounce>
     <AHA @popup="popup"></AHA>
+    <observe></observe>
   </div>
 </template>
 
 <script>
 import debounce from "../abstractComponents/demo.vue";
 import demo from "../components/demo.vue";
+import observe from "./observe.vue";
 export default {
   name: 'HelloWorld',
   components: {
     debounce,
     'AHA': demo,
+    observe,
   },
   props: {
     msg: String

@@ -7,6 +7,7 @@
 </template>
 
 <script>
+  import { obj } from '../observe.js'
   export default {
     // VUE3 功能
     // emits: {
@@ -15,8 +16,18 @@
     //     return true;
     //   },
     // },
+    methods: {
+      demoFunc() {
+        console.log('demo.vue=====L21')
+      },
+      test() {
+        obj.listen('demo', this.demoFunc)
+      },
+    },
     mounted() {
-      this.$emit('popup', {name: 'wo'});
+      console.log(obj, '=======L28')
+      this.test()
+      // this.$emit('popup', {name: 'wo'});
     },
   }
 </script>
