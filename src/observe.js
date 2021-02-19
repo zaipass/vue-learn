@@ -96,7 +96,7 @@ let obj4 = {
     if (!fns) return false;
     // 不传递对应的函数; 默认取消全部函数订阅
     if (!fn) {
-      fns && (fns.length = 0);
+      fns.length = 0;
     } else {
       for (let i=0; i<fns.length;i++) {
         if (fn === fns[i]) {
@@ -112,7 +112,7 @@ obj4.listen('key1', obj2fn2);
 obj4.listen('key2', obj2fn2);
 // obj4.remove('key1');
 obj4.trigger('key1', 'DI值', 200);
-obj4.trigger('key2', 'key1值', 150);
+obj4.trigger('key2', 'key2值', 150);
 
 return obj4
 })();

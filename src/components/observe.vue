@@ -14,8 +14,8 @@
       trigger() {
         /** 触发订阅 */
         // console.log(this.$http);
-        obj.trigger('demo')
-        obj.trigger('key1')
+        // obj.trigger('demo')
+        obj.trigger('key1', {address: 'aha'})
       },
     },
   }
