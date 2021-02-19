@@ -17,8 +17,13 @@
     //   },
     // },
     methods: {
-      demoFunc() {
-        console.log('demo.vue=====L21')
+      demoFunc(param) {
+        if (!param.sex) {
+          param.sex = 'man'
+        } else {
+          param.age = '18'
+        }
+        console.log('demo.vue=====L21', param)
       },
       test() {
         obj.listen('demo', this.demoFunc)
@@ -26,7 +31,8 @@
     },
     mounted() {
       console.log(obj, '=======L28')
-      this.test()
+      // this.test()
+      this.test.before(this.demoFunc).before(this.demoFunc)({name: 'wo'})
       // this.$emit('popup', {name: 'wo'});
     },
   }
